@@ -49,6 +49,15 @@ public class Quad implements QuadState {
         return A.add(B).add(C).add(D).zero();
     }
 
+    public static Quad parseQuad(String quadData) {
+        String[] cardStrings = quadData.split(";");
+        Card[] cards = new Card[cardStrings.length];
+        for (int i = 0; i < cardStrings.length; i++) {
+            cards[i] = Card.parseCard(cardStrings[i]);
+        }
+        return new Quad(cards[0], cards[1], cards[2], cards[3]);
+    }
+
     public Card[] getCards() {
         return cards;
     }

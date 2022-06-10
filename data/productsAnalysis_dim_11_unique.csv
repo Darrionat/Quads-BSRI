@@ -1,0 +1,618 @@
+1101;1000;0010;0111
+	true,false,false,627,0,0
+	false,true,false,0,596,0
+	false,false,false,30,34,0
+0001;1001;1011;0011
+	true,false,false,587,0,0
+	false,true,false,0,566,0
+	false,false,false,25,43,0
+1101;0010;0000;1111
+	true,false,false,576,0,0
+	false,true,false,0,591,0
+	false,false,false,50,31,0
+1101;0011;0010;1100
+	true,false,false,589,0,0
+	false,true,false,0,601,0
+	false,false,false,42,30,0
+1101;0010;0110;1001
+	true,false,false,583,0,0
+	false,true,false,0,600,0
+	false,false,false,41,31,0
+1100;1000;0100;0000
+	true,false,false,578,0,0
+	false,true,false,0,575,0
+	false,false,false,34,35,0
+0111;0100;1100;1111
+	true,false,false,591,0,0
+	false,true,false,0,617,0
+	false,false,false,34,42,0
+1101;1100;1010;1011
+	true,false,false,554,0,0
+	false,true,false,0,603,0
+	false,false,false,37,40,0
+1010;0010;0100;1100
+	true,false,false,577,0,0
+	false,true,false,0,612,0
+	false,false,false,33,31,0
+0101;1110;1001;0010
+	true,false,false,583,0,0
+	false,true,false,0,565,0
+	false,false,false,49,56,0
+1001;1101;1011;1111
+	true,false,false,587,0,0
+	false,true,false,0,635,0
+	false,false,false,39,48,0
+1100;0001;0011;1110
+	true,false,false,594,0,0
+	false,true,false,0,600,0
+	false,false,false,31,34,0
+1001;0110;0101;1010
+	true,true,true,6321,6321,6321
+	true,true,false,4609,4747,1620
+	true,false,true,6342,6342,6342
+	true,false,false,562,619,181
+	false,true,true,387,387,387
+	false,true,false,587,556,178
+	false,false,true,401,401,401
+	false,false,false,32,34,8
+0000;0101;0011;0110
+	true,true,true,6265,6265,6265
+	true,true,false,4797,4704,1201
+	true,false,true,6240,6240,6240
+	true,false,false,586,615,144
+	false,true,true,392,392,392
+	false,true,false,574,541,123
+	false,false,true,356,356,356
+	false,false,false,28,50,9
+0010;0110;1100;1000
+	true,false,false,604,0,0
+	false,true,false,0,606,0
+	false,false,false,31,39,0
+0010;1011;1111;0110
+	true,false,false,578,0,0
+	false,true,false,0,564,0
+	false,false,false,29,28,0
+1110;1000;1001;1111
+	true,false,false,555,0,0
+	false,true,false,0,557,0
+	false,false,false,32,28,0
+1111;1001;0000;0110
+	true,true,false,4674,4658,0
+	true,false,false,562,574,0
+	false,true,false,572,572,0
+	false,false,false,37,35,0
+1110;1000;1011;1101
+	true,false,false,585,0,0
+	false,true,false,0,642,0
+	false,false,false,40,38,0
+0011;0010;0110;0111
+	true,false,false,578,0,0
+	false,true,false,0,610,0
+	false,false,false,36,29,0
+0011;0000;1001;1010
+	true,true,true,6283,6283,6283
+	true,true,false,4689,4639,1178
+	true,false,true,6360,6360,6360
+	true,false,false,600,598,152
+	false,true,true,419,419,419
+	false,true,false,579,622,160
+	false,false,true,388,388,388
+	false,false,false,36,34,8
+0000;1001;0100;1101
+	true,false,false,587,0,0
+	false,true,false,0,583,0
+	false,false,false,20,33,0
+0100;0001;1110;1011
+	true,false,false,571,0,0
+	false,true,false,0,592,0
+	false,false,false,35,38,0
+0010;0101;1011;1100
+	true,false,false,570,0,0
+	false,true,false,0,561,0
+	false,false,false,39,25,0
+1100;0111;0000;1011
+	true,false,false,574,0,0
+	false,true,false,0,629,0
+	false,false,false,39,47,0
+1001;1000;0011;0010
+	true,false,false,597,0,0
+	false,true,false,0,560,0
+	false,false,false,38,32,0
+0110;0111;1010;1011
+	true,false,false,590,0,0
+	false,true,false,0,580,0
+	false,false,false,33,37,0
+1010;1001;1101;1110
+	true,false,false,549,0,0
+	false,true,false,0,572,0
+	false,false,false,36,38,0
+0110;0001;1011;1100
+	true,false,false,614,0,0
+	false,true,false,0,563,0
+	false,false,false,37,26,0
+0000;0100;1010;1110
+	true,false,false,576,0,0
+	false,true,false,0,592,0
+	false,false,false,34,37,0
+1111;0100;0010;1001
+	true,false,false,593,0,0
+	false,true,false,0,614,0
+	false,false,false,36,34,0
+1001;1111;0111;0001
+	true,false,false,546,0,0
+	false,true,false,0,573,0
+	false,false,false,20,38,0
+1100;0111;1001;0010
+	true,false,false,571,0,0
+	false,true,false,0,619,0
+	false,false,false,43,47,0
+0001;0111;1101;1011
+	true,false,false,603,0,0
+	false,true,false,0,568,0
+	false,false,false,36,37,0
+0100;0010;0111;0001
+	true,false,false,586,0,0
+	false,true,false,0,619,0
+	false,false,false,42,41,0
+0100;0010;1110;1000
+	true,false,false,616,0,0
+	false,true,false,0,590,0
+	false,false,false,41,38,0
+1110;1000;0011;0101
+	true,false,false,613,0,0
+	false,true,false,0,588,0
+	false,false,false,43,44,0
+0111;0101;1001;1011
+	true,false,false,601,0,0
+	false,true,false,0,617,0
+	false,false,false,38,43,0
+0001;0111;0101;0011
+	true,false,false,621,0,0
+	false,true,false,0,572,0
+	false,false,false,39,41,0
+0001;0100;1100;1001
+	true,false,false,564,0,0
+	false,true,false,0,585,0
+	false,false,false,32,39,0
+1110;0000;1100;0010
+	true,false,false,581,0,0
+	false,true,false,0,591,0
+	false,false,false,33,35,0
+1110;1100;0101;0111
+	true,false,false,589,0,0
+	false,true,false,0,644,0
+	false,false,false,34,36,0
+1000;1101;1111;1010
+	true,false,false,573,0,0
+	false,true,false,0,582,0
+	false,false,false,38,50,0
+0011;1011;1100;0100
+	true,false,false,563,0,0
+	false,true,false,0,595,0
+	false,false,false,30,40,0
+1011;0000;1101;0110
+	true,false,false,571,0,0
+	false,true,false,0,582,0
+	false,false,false,43,36,0
+0100;0000;0110;0010
+	true,false,false,572,0,0
+	false,true,false,0,586,0
+	false,false,false,26,51,0
+1100;0001;1101;0000
+	true,false,false,559,0,0
+	false,true,false,0,664,0
+	false,false,false,37,45,0
+1110;0111;0000;1001
+	true,false,false,573,0,0
+	false,true,false,0,578,0
+	false,false,false,48,41,0
+0010;1111;0001;1100
+	true,false,false,570,0,0
+	false,true,false,0,522,0
+	false,false,false,37,39,0
+0111;0010;1011;1110
+	true,false,false,591,0,0
+	false,true,false,0,568,0
+	false,false,false,31,33,0
+0110;0001;0011;0100
+	true,false,false,580,0,0
+	false,true,false,0,599,0
+	false,false,false,39,28,0
+1001;0101;0011;1111
+	true,true,true,6182,6182,6182
+	true,true,false,4716,4801,1177
+	true,false,true,6110,6110,6110
+	true,false,false,629,592,163
+	false,true,true,398,398,398
+	false,true,false,549,543,123
+	false,false,true,392,392,392
+	false,false,false,32,37,7
+0100;0001;0000;0101
+	true,false,false,598,0,0
+	false,true,false,0,608,0
+	false,false,false,26,43,0
+1011;1110;0011;0110
+	true,false,false,574,0,0
+	false,true,false,0,568,0
+	false,false,false,33,46,0
+1000;1100;1101;1001
+	true,false,false,597,0,0
+	false,true,false,0,591,0
+	false,false,false,31,30,0
+0110;1101;0111;1100
+	true,false,false,570,0,0
+	false,true,false,0,584,0
+	false,false,false,44,40,0
+0001;0000;1111;1110
+	true,false,false,542,0,0
+	false,true,false,0,608,0
+	false,false,false,39,41,0
+0010;1110;1101;0001
+	true,false,false,592,0,0
+	false,true,false,0,564,0
+	false,false,false,30,35,0
+0100;0111;0110;0101
+	true,false,false,589,0,0
+	false,true,false,0,593,0
+	false,false,false,39,42,0
+0100;0111;0000;0011
+	true,false,false,571,0,0
+	false,true,false,0,615,0
+	false,false,false,31,41,0
+1110;0101;0100;1111
+	true,false,false,571,0,0
+	false,true,false,0,607,0
+	false,false,false,45,46,0
+1000;1001;1011;1010
+	true,false,false,555,0,0
+	false,true,false,0,611,0
+	false,false,false,47,36,0
+0000;1101;1000;0101
+	true,false,false,603,0,0
+	false,true,false,0,600,0
+	false,false,false,37,48,0
+1010;0101;1101;0010
+	true,false,false,594,0,0
+	false,true,false,0,621,0
+	false,false,false,41,40,0
+1000;1010;0011;0001
+	true,false,false,604,0,0
+	false,true,false,0,563,0
+	false,false,false,43,22,0
+0100;1101;1000;0001
+	true,false,false,599,0,0
+	false,true,false,0,589,0
+	false,false,false,39,34,0
+0101;0010;1000;1111
+	true,false,false,636,0,0
+	false,true,false,0,619,0
+	false,false,false,21,44,0
+1011;0000;0100;1111
+	true,false,false,609,0,0
+	false,true,false,0,543,0
+	false,false,false,30,28,0
+0011;1110;1101;0000
+	true,false,false,599,0,0
+	false,true,false,0,616,0
+	false,false,false,41,43,0
+0001;1001;0110;1110
+	true,false,false,574,0,0
+	false,true,false,0,604,0
+	false,false,false,27,39,0
+1011;0011;0000;1000
+	true,false,false,583,0,0
+	false,true,false,0,597,0
+	false,false,false,39,38,0
+0101;0010;0011;0100
+	true,false,false,605,0,0
+	false,true,false,0,631,0
+	false,false,false,33,34,0
+1010;0110;0001;1101
+	true,false,false,559,0,0
+	false,true,false,0,581,0
+	false,false,false,43,43,0
+0101;1011;1101;0011
+	true,false,false,590,0,0
+	false,true,false,0,615,0
+	false,false,false,42,43,0
+1111;1110;0010;0011
+	true,false,false,552,0,0
+	false,true,false,0,633,0
+	false,false,false,45,30,0
+0110;0111;1001;1000
+	true,false,false,601,0,0
+	false,true,false,0,588,0
+	false,false,false,28,45,0
+1110;0110;0000;1000
+	true,false,false,550,0,0
+	false,true,false,0,586,0
+	false,false,false,31,30,0
+1100;1101;1110;1111
+	true,false,false,591,0,0
+	false,true,false,0,560,0
+	false,false,false,50,43,0
+0001;0000;0110;0111
+	true,false,false,602,0,0
+	false,true,false,0,536,0
+	false,false,false,44,33,0
+0100;1001;1000;0101
+	true,false,false,583,0,0
+	false,true,false,0,581,0
+	false,false,false,27,33,0
+1110;0100;1100;0110
+	true,false,false,613,0,0
+	false,true,false,0,605,0
+	false,false,false,36,28,0
+1000;1100;1111;1011
+	true,false,false,564,0,0
+	false,true,false,0,592,0
+	false,false,false,38,39,0
+1011;0000;0101;1110
+	true,false,false,573,0,0
+	false,true,false,0,623,0
+	false,false,false,40,37,0
+1001;0000;1000;0001
+	true,false,false,617,0,0
+	false,true,false,0,571,0
+	false,false,false,32,39,0
+0101;0110;1000;1011
+	true,false,false,644,0,0
+	false,true,false,0,573,0
+	false,false,false,44,36,0
+0000;0010;0101;0111
+	true,false,false,609,0,0
+	false,true,false,0,589,0
+	false,false,false,36,39,0
+1111;1000;0100;0011
+	true,false,false,604,0,0
+	false,true,false,0,573,0
+	false,false,false,34,40,0
+1000;1100;0001;0101
+	true,false,false,553,0,0
+	false,true,false,0,594,0
+	false,false,false,40,34,0
+1001;0010;1010;0001
+	true,false,false,532,0,0
+	false,true,false,0,556,0
+	false,false,false,38,35,0
+1100;1001;0011;0110
+	true,true,true,6421,6421,6421
+	true,true,false,4634,4567,1561
+	true,false,true,6264,6264,6264
+	true,false,false,633,568,204
+	false,true,true,369,369,369
+	false,true,false,578,599,204
+	false,false,true,381,381,381
+	false,false,false,29,31,10
+1110;1000;0001;0111
+	true,false,false,557,0,0
+	false,true,false,0,590,0
+	false,false,false,40,39,0
+0010;1010;0111;1111
+	true,false,false,613,0,0
+	false,true,false,0,561,0
+	false,false,false,26,36,0
+1010;0100;0101;1011
+	true,false,false,587,0,0
+	false,true,false,0,530,0
+	false,false,false,43,41,0
+0110;0101;1110;1101
+	true,false,false,618,0,0
+	false,true,false,0,574,0
+	false,false,false,30,48,0
+0110;1101;0011;1000
+	true,false,false,570,0,0
+	false,true,false,0,564,0
+	false,false,false,41,30,0
+0110;1101;0100;1111
+	true,false,false,566,0,0
+	false,true,false,0,577,0
+	false,false,false,33,31,0
+1011;1111;0101;0001
+	true,false,false,576,0,0
+	false,true,false,0,557,0
+	false,false,false,29,36,0
+1010;0110;1111;0011
+	true,true,true,6168,6168,6168
+	true,true,false,4740,4680,1151
+	true,false,true,6177,6177,6177
+	true,false,false,534,575,134
+	false,true,true,402,402,402
+	false,true,false,546,565,147
+	false,false,true,405,405,405
+	false,false,false,49,37,13
+0100;1011;1000;0111
+	true,false,false,576,0,0
+	false,true,false,0,599,0
+	false,false,false,32,37,0
+0101;1001;0000;1100
+	true,true,true,6198,6198,6198
+	true,true,false,4654,4630,1137
+	true,false,true,6278,6278,6278
+	true,false,false,611,624,153
+	false,true,true,389,389,389
+	false,true,false,582,577,148
+	false,false,true,387,387,387
+	false,false,false,37,32,6
+0010;0110;1010;1110
+	true,false,false,624,0,0
+	false,true,false,0,560,0
+	false,false,false,40,30,0
+1001;1110;1100;1011
+	true,false,false,597,0,0
+	false,true,false,0,605,0
+	false,false,false,39,39,0
+0110;1011;0100;1001
+	true,false,false,576,0,0
+	false,true,false,0,581,0
+	false,false,false,47,45,0
+1111;1010;0100;0001
+	true,false,false,542,0,0
+	false,true,false,0,590,0
+	false,false,false,46,28,0
+0011;0101;1010;1100
+	true,true,true,6219,6219,6219
+	true,true,false,4560,4489,1437
+	true,false,true,6393,6393,6393
+	true,false,false,589,597,206
+	false,true,true,381,381,381
+	false,true,false,640,650,232
+	false,false,true,392,392,392
+	false,false,false,36,32,10
+1100;1010;0110;0000
+	true,true,true,6252,6252,6252
+	true,true,false,4590,4757,1172
+	true,false,true,6333,6333,6333
+	true,false,false,598,558,142
+	false,true,true,428,428,428
+	false,true,false,579,574,151
+	false,false,true,391,391,391
+	false,false,false,49,34,10
+0111;0011;1111;1011
+	true,false,false,626,0,0
+	false,true,false,0,569,0
+	false,false,false,45,49,0
+0101;1100;1101;0100
+	true,false,false,565,0,0
+	false,true,false,0,588,0
+	false,false,false,39,39,0
+0100;0010;1011;1101
+	true,false,false,595,0,0
+	false,true,false,0,586,0
+	false,false,false,42,38,0
+0011;1010;1011;0010
+	true,false,false,589,0,0
+	false,true,false,0,604,0
+	false,false,false,39,36,0
+1010;1000;0100;0110
+	true,false,false,560,0,0
+	false,true,false,0,601,0
+	false,false,false,35,32,0
+0001;0000;0010;0011
+	true,false,false,569,0,0
+	false,true,false,0,601,0
+	false,false,false,33,30,0
+1100;0011;0000;1111
+	true,true,false,4845,4560,0
+	true,false,false,591,562,0
+	false,true,false,568,531,0
+	false,false,false,43,48,0
+0001;1111;1000;0110
+	true,false,false,562,0,0
+	false,true,false,0,573,0
+	false,false,false,33,28,0
+1001;0111;1101;0011
+	true,false,false,597,0,0
+	false,true,false,0,572,0
+	false,false,false,31,33,0
+0010;1000;0000;1010
+	true,false,false,593,0,0
+	false,true,false,0,583,0
+	false,false,false,37,43,0
+1011;1000;0010;0001
+	true,false,false,585,0,0
+	false,true,false,0,588,0
+	false,false,false,34,33,0
+0101;1111;0000;1010
+	true,true,false,4674,4750,0
+	true,false,false,558,568,0
+	false,true,false,587,573,0
+	false,false,false,41,34,0
+0000;0111;1101;1010
+	true,false,false,553,0,0
+	false,true,false,0,592,0
+	false,false,false,32,37,0
+0000;1010;1011;0001
+	true,false,false,568,0,0
+	false,true,false,0,555,0
+	false,false,false,44,38,0
+0111;0101;1101;1111
+	true,false,false,540,0,0
+	false,true,false,0,550,0
+	false,false,false,38,41,0
+1111;1100;1001;1010
+	true,true,true,6238,6238,6238
+	true,true,false,4769,4783,1211
+	true,false,true,6351,6351,6351
+	true,false,false,555,564,144
+	false,true,true,407,407,407
+	false,true,false,554,535,126
+	false,false,true,382,382,382
+	false,false,false,36,33,6
+0111;1000;1100;0011
+	true,false,false,629,0,0
+	false,true,false,0,554,0
+	false,false,false,37,39,0
+0010;1001;0000;1011
+	true,false,false,599,0,0
+	false,true,false,0,596,0
+	false,false,false,35,44,0
+1110;1100;1000;1010
+	true,false,false,656,0,0
+	false,true,false,0,553,0
+	false,false,false,43,32,0
+1000;0111;1010;0101
+	true,false,false,587,0,0
+	false,true,false,0,606,0
+	false,false,false,31,42,0
+1100;1111;0101;0110
+	true,true,true,6357,6357,6357
+	true,true,false,4685,4646,1142
+	true,false,true,6188,6188,6188
+	true,false,false,608,595,155
+	false,true,true,369,369,369
+	false,true,false,561,567,147
+	false,false,true,382,382,382
+	false,false,false,39,49,14
+0100;0011;1010;1101
+	true,false,false,562,0,0
+	false,true,false,0,639,0
+	false,false,false,29,45,0
+1001;0111;0100;1010
+	true,false,false,581,0,0
+	false,true,false,0,623,0
+	false,false,false,35,46,0
+1111;1110;1011;1010
+	true,false,false,558,0,0
+	false,true,false,0,594,0
+	false,false,false,34,41,0
+1000;0111;1111;0000
+	true,false,false,572,0,0
+	false,true,false,0,604,0
+	false,false,false,39,30,0
+1110;0100;1101;0111
+	true,false,false,621,0,0
+	false,true,false,0,604,0
+	false,false,false,41,36,0
+0011;0001;1111;1101
+	true,false,false,580,0,0
+	false,true,false,0,571,0
+	false,false,false,46,44,0
+0010;0110;0001;0101
+	true,false,false,594,0,0
+	false,true,false,0,559,0
+	false,false,false,41,41,0
+1110;0011;1001;0100
+	true,false,false,592,0,0
+	false,true,false,0,623,0
+	false,false,false,36,41,0
+0101;0001;1010;1110
+	true,false,false,628,0,0
+	false,true,false,0,578,0
+	false,false,false,36,31,0
+1010;0011;1110;0111
+	true,false,false,588,0,0
+	false,true,false,0,624,0
+	false,false,false,29,43,0
+1101;0001;0101;1001
+	true,false,false,606,0,0
+	false,true,false,0,541,0
+	false,false,false,36,34,0
+0111;1111;1110;0110
+	true,false,false,588,0,0
+	false,true,false,0,611,0
+	false,false,false,29,27,0
+1010;0001;1100;0111
+	true,false,false,581,0,0
+	false,true,false,0,570,0
+	false,false,false,29,30,0

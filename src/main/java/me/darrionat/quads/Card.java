@@ -61,6 +61,15 @@ public class Card {
         return new Card(bits);
     }
 
+    public static Card parseCard(String cardString) {
+        char[] bits = cardString.toCharArray();
+        return new Card(
+                Integer.valueOf(bits[0] + ""),
+                Integer.valueOf(bits[1] + ""),
+                Integer.valueOf(bits[2] + ""),
+                Integer.valueOf(bits[3] + ""));
+    }
+
     public Rational[] getBits() {
         return bits;
     }

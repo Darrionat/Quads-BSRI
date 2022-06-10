@@ -1,0 +1,3 @@
+dim,cards1Quad,cards2Quad,transpose
+and
+quad,rowOccurrences,colOccurrences,doubleOccurrences
