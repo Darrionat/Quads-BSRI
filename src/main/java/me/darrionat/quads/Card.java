@@ -15,14 +15,6 @@ public class Card {
         this(toRationals(bits));
     }
 
-    private static Rational[] toRationals(int... bits) {
-        Rational[] toReturn = new Rational[bits.length];
-        for (int i = 0; i < bits.length; i++) {
-            toReturn[i] = new Rational(bits[i]);
-        }
-        return toReturn;
-    }
-
     /**
      * Creates a card from the given rationals.
      * <p>
@@ -51,6 +43,24 @@ public class Card {
         }
     }
 
+    private static Rational[] toRationals(int... bits) {
+        Rational[] toReturn = new Rational[bits.length];
+        for (int i = 0; i < bits.length; i++) {
+            toReturn[i] = new Rational(bits[i]);
+        }
+        return toReturn;
+    }
+
+    public static Card getRandomCard(int dim) {
+        Random r = new Random();
+        Rational[] bits = new Rational[dim];
+        for (int i = 0; i < dim; i++) {
+            // random value between 0 (inclusive) and 2 (exclusive) => value in {0,1}
+            bits[i] = r.nextInt(2) == 0 ? Rational.ZERO : Rational.ONE;
+        }
+        return new Card(bits);
+    }
+
     public Rational[] getBits() {
         return bits;
     }
@@ -66,16 +76,6 @@ public class Card {
 
     public int dimension() {
         return bits.length;
-    }
-
-    public static Card getRandomCard(int dim) {
-        Random r = new Random();
-        Rational[] bits = new Rational[dim];
-        for (int i = 0; i < dim; i++) {
-            // random value between 0 (inclusive) and 2 (exclusive) => value in {0,1}
-            bits[i] = r.nextInt(2) == 0 ? Rational.ZERO : Rational.ONE;
-        }
-        return new Card(bits);
     }
 
     /**
