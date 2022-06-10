@@ -22,14 +22,14 @@ public class QuadOutputDistribution {
             for (int j = 0; j < 2; j++) {
                 for (int k = 0; k < 2; k++) {
                     for (int dim = 3; dim < 12; dim++) {
-                        quadMultiplication(N, dim, i == 0, j == 0, k == 0);
+                        quadMultiplication(N, dim, i == 0, j == 0, k == 0, true);
                     }
                 }
             }
         }
     }
 
-    public static void quadMultiplication(int tests, int dim, boolean quad1Quad, boolean quad2Quad, boolean transpose) {
+    public static void quadMultiplication(int tests, int dim, boolean quad1Quad, boolean quad2Quad, boolean transpose, boolean quadRequiresUnique) {
         if (dim < 3) {
             throw new IllegalArgumentException("requires dimension greater than 2");
         }
@@ -56,7 +56,7 @@ public class QuadOutputDistribution {
             if (transpose)
                 B = A.transpose();
             Matrix AB = A.multiply(B);
-            Quad[] quads = rowColumnQuads(AB);
+            Quad[] quads = rowColumnQuads(AB, quadRequiresUnique);
             // row quad occurrence
             if (quads[0] != null) {
                 if (rowQuadOccurrences.get(quads[0]) == null) {
@@ -122,7 +122,7 @@ public class QuadOutputDistribution {
      * @return An array of length 2. The first and second slots represent if a row or column quad can be formed,
      *         respectively.
      */
-    private static Quad[] rowColumnQuads(Matrix matrix) {
+    private static Quad[] rowColumnQuads(Matrix matrix, boolean requiresUnique) {
         Card[] rowCards = new Card[CARD_AMT];
         for (int row = 0; row < matrix.getRowAmount(); row++) {
             rowCards[row] = new Card(matrix.getRow(row));
@@ -132,16 +132,12 @@ public class QuadOutputDistribution {
             colCards[col] = new Card(matrix.getColumn(col));
         }
         Quad rowQuad = null;
-        try {
+        if (Quad.formsQuad(rowCards[0], rowCards[1], rowCards[2], rowCards[3], requiresUnique))
             rowQuad = new Quad(rowCards[0], rowCards[1], rowCards[2], rowCards[3]);
-        } catch (Exception ignored) {
-        }
+
         Quad colQuad = null;
-        try {
+        if (Quad.formsQuad(colCards[0], colCards[1], colCards[2], colCards[3], requiresUnique))
             colQuad = new Quad(colCards[0], colCards[1], colCards[2], colCards[3]);
-        } catch (Exception ignored) {
-        }
         return new Quad[]{rowQuad, colQuad};
     }
-
 }

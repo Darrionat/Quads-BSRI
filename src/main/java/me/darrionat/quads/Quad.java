@@ -1,6 +1,5 @@
 package me.darrionat.quads;
 
-import me.darrionat.matrixlib.algebra.sets.Rational;
 import me.darrionat.quads.interfaces.QuadState;
 
 import java.util.Arrays;
@@ -11,7 +10,7 @@ public class Quad implements QuadState {
     private String asString;
 
     public Quad(Card A, Card B, Card C, Card D) {
-        if (!formsQuad(A, B, C, D))
+        if (!formsQuad(A, B, C, D, true))
             throw new IllegalArgumentException("Cards do not form a quad");
         cards = new Card[]{A, B, C, D};
     }
@@ -43,25 +42,11 @@ public class Quad implements QuadState {
         return new Card[]{A, B, C};
     }
 
-    public static boolean formsQuad(Card A, Card B, Card C, Card D) {
-        if (A.equals(B) || A.equals(C) || A.equals(D) || B.equals(C) || B.equals(D) || C.equals(D))
-            return false;
+    public static boolean formsQuad(Card A, Card B, Card C, Card D, boolean requiresUnique) {
+        if (requiresUnique)
+            if (A.equals(B) || A.equals(C) || A.equals(D) || B.equals(C) || B.equals(D) || C.equals(D))
+                return false;
         return A.add(B).add(C).add(D).zero();
-    }
-
-    public static void main(String[] args) {
-        // todo test equals method
-        Card A = new Card(0, 0);
-        Card B = new Card(0, 1);
-        Card C = new Card(1, 0);
-        Card D = new Card(1, 1);
-        Card E = new Card(1, 1);
-        Rational r = new Rational(1);
-        Rational r2 = new Rational(5, 5);
-        System.out.println(r.hashCode() == r2.hashCode());
-        System.out.println(D.equals(E));
-        System.out.println(new Quad(A, B, C, D).equals(new Quad(C, B, D, A)));
-        System.out.println(new Quad(A, B, C, D).equals(new Quad(C, B, E, A)));
     }
 
     public Card[] getCards() {

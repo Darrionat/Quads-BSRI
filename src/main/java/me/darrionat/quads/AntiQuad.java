@@ -9,15 +9,9 @@ public class AntiQuad implements QuadState {
     private final Card[] cards;
 
     public AntiQuad(Card A, Card B, Card C, Card D) {
-        if (A.equals(B) || A.equals(C) || A.equals(D) || B.equals(C) || B.equals(D) || C.equals(D))
-            throw new IllegalArgumentException("Cards must be unique");
-        if (Quad.formsQuad(A, B, C, D))
+        if (Quad.formsQuad(A, B, C, D, true))
             throw new IllegalArgumentException("Cards must not form a quad");
         cards = new Card[]{A, B, C, D};
-    }
-
-    public Card[] getCards() {
-        return cards;
     }
 
     public static AntiQuad randomAntiQuad(int dim) {
@@ -30,8 +24,12 @@ public class AntiQuad implements QuadState {
         while (A.equals(D) || B.equals(D) || C.equals(D)) {
             D = Card.getRandomCard(dim);
         }
-        if (Quad.formsQuad(A, B, C, D))
+        if (Quad.formsQuad(A, B, C, D, true))
             return randomAntiQuad(dim);
         return new AntiQuad(A, B, C, D);
+    }
+
+    public Card[] getCards() {
+        return cards;
     }
 }
