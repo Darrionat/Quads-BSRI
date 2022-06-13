@@ -1,6 +1,7 @@
 package me.darrionat.quads;
 
 import me.darrionat.quads.interfaces.QuadState;
+import me.darrionat.quads.statics.PrimeLookup;
 
 import java.util.Arrays;
 import java.util.HashSet;

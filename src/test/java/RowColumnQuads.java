@@ -9,16 +9,19 @@ public class RowColumnQuads {
     public static final int CARD_AMT = 4;
 
     public static void main(String[] args) {
-        int dim = 6;
-        Matrix A = new Matrix(CARD_AMT, dim);
-        QuadState quad1 = Quad.randomQuad(dim);
+        for (int test = 0; test < 100; test++) {
+            int dim = 6;
+            Matrix A = new Matrix(CARD_AMT, dim);
+            QuadState quad1 = Quad.randomQuad(dim);
 
-        Card[] quad1Cards = quad1.getCards();
-        for (int i = 0; i < CARD_AMT; i++) {
-            A.setRow(i, quad1Cards[i].getBits());
+            Card[] quad1Cards = quad1.getCards();
+            for (int i = 0; i < CARD_AMT; i++) {
+                A.setRow(i, quad1Cards[i].getBits());
+            }
+            System.out.println(A);
+            System.out.println(A.multiply(A.transpose()));
+
         }
-        System.out.println(A);
-        System.out.println(A.multiply(A.transpose()));
     }
 
     public static void main2(String[] args) {

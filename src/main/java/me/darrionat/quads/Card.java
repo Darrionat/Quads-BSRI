@@ -62,12 +62,12 @@ public class Card {
     }
 
     public static Card parseCard(String cardString) {
-        char[] bits = cardString.toCharArray();
-        return new Card(
-                Integer.valueOf(bits[0] + ""),
-                Integer.valueOf(bits[1] + ""),
-                Integer.valueOf(bits[2] + ""),
-                Integer.valueOf(bits[3] + ""));
+        // char[] bits = cardString.toCharArray();
+        int[] bits = new int[cardString.length()];
+        for (int i = 0; i < bits.length; i++) {
+            bits[i] = cardString.charAt(i);
+        }
+        return new Card(bits);
     }
 
     public Rational[] getBits() {
