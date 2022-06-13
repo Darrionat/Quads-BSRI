@@ -70,7 +70,6 @@ public class Quad implements QuadState {
         Quad ABCD = (Quad) obj;
         HashSet<Card> set1 = new HashSet<>(Arrays.asList(cards));
         HashSet<Card> set2 = new HashSet<>(Arrays.asList(ABCD.cards));
-        boolean x = set1.equals(set2);
         return set1.equals(set2);
     }
 
