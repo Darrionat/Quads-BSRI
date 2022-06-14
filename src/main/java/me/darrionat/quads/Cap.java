@@ -1,22 +1,19 @@
 package me.darrionat.quads;
 
+import me.darrionat.quads.interfaces.QuadState;
+
 import java.util.HashSet;
 
-public class Cap {
-    private Card[] cards;
-
-    private Cap() {
-
-    }
+/**
+ * Represents a set of cards that contain no quads.
+ */
+public class Cap implements QuadState {
+    protected final Card[] cards;
 
     public Cap(Card[] cards) {
         if (!formsCap(cards))
-            throw new IllegalArgumentException("Cards form a quad");
+            throw new IllegalArgumentException("Cards form a quad or contain a duplicate card");
         this.cards = cards;
-    }
-
-    public static Cap randomCap() {
-        return null;
     }
 
     /**
@@ -24,6 +21,8 @@ public class Cap {
      * <p>
      * Essentially, this algorithm looks at all possible 2-term sums of the cards. If any two sums are equal, there must
      * exist a quad in the set of cards.
+     * <p>
+     * Note that this method also ensures that the cards are unique.
      *
      * @param cards The cards to check
      * @return {@code true} if the cards form a cap; {@code false} otherwise
@@ -37,7 +36,7 @@ public class Cap {
         }
         int s = cards.length;
         // (size choose 2)  = s*s-1/2
-        return allSums.size() == (s * s - 1) / 2;
+        return allSums.size() == (s * (s - 1)) / 2;
     }
 
     public Card[] getCards() {

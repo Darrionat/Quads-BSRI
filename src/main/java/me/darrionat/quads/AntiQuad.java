@@ -1,17 +1,12 @@
 package me.darrionat.quads;
 
-import me.darrionat.quads.interfaces.QuadState;
-
 /**
  * Represents a qap of size four. Equivalently, an AntiQuad represents four unique cards that do not form a quad
  */
-public class AntiQuad implements QuadState {
-    private final Card[] cards;
+public class AntiQuad extends Cap {
 
     public AntiQuad(Card A, Card B, Card C, Card D) {
-        if (Quad.formsQuad(A, B, C, D, true))
-            throw new IllegalArgumentException("Cards must not form a quad");
-        cards = new Card[]{A, B, C, D};
+        super(new Card[]{A, B, C, D});
     }
 
     public static AntiQuad randomAntiQuad(int dim) {
@@ -27,9 +22,5 @@ public class AntiQuad implements QuadState {
         if (Quad.formsQuad(A, B, C, D, true))
             return randomAntiQuad(dim);
         return new AntiQuad(A, B, C, D);
-    }
-
-    public Card[] getCards() {
-        return cards;
     }
 }
