@@ -1,5 +1,4 @@
 import me.darrionat.matrixlib.algebra.sets.Quantity;
-import me.darrionat.matrixlib.algebra.sets.Rational;
 import me.darrionat.matrixlib.matrices.Matrix;
 import me.darrionat.quads.Card;
 import me.darrionat.quads.Quad;
@@ -16,7 +15,7 @@ public class QuadTransformation {
 
         Card[] quad1Cards = quad1.getCards();
         for (int i = 0; i < CARD_AMT; i++) {
-            A.setRow(i, quad1Cards[i].getBits());
+            A.setRow(i, quad1Cards[i].getBits(dim));
         }
         System.out.println(A);
         for (int i = 0; i < Math.pow(2, dim); i++) {
@@ -27,7 +26,7 @@ public class QuadTransformation {
             }
             Card transform = Card.parseCard(binaryString.toString());
             System.out.println(transform);
-            Rational[] bits = transform.getBits();
+            Quantity[] bits = transform.getBits(dim);
             Quantity[][] quantities = new Quantity[dim][1];
             for (int j = 0; j < dim; j++) {
                 quantities[j][0] = bits[j];

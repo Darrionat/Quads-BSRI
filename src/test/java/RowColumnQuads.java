@@ -16,7 +16,7 @@ public class RowColumnQuads {
 
             Card[] quad1Cards = quad1.getCards();
             for (int i = 0; i < CARD_AMT; i++) {
-                A.setRow(i, quad1Cards[i].getBits());
+                A.setRow(i, quad1Cards[i].getBits(dim));
             }
             System.out.println(A);
             System.out.println(A.multiply(A.transpose()));
@@ -66,8 +66,8 @@ public class RowColumnQuads {
             Card[] quad1Cards = quad1.getCards();
             Card[] quad2Cards = quad2.getCards();
             for (int i = 0; i < CARD_AMT; i++) {
-                A.setRow(i, quad1Cards[i].getBits());
-                B.setColumn(i, quad2Cards[i].getBits());
+                A.setRow(i, quad1Cards[i].getBits(dim));
+                B.setColumn(i, quad2Cards[i].getBits(dim));
             }
 
             if (transpose)
@@ -100,11 +100,11 @@ public class RowColumnQuads {
     private static boolean[] rowColumnQuads(Matrix matrix, boolean requiresUnique) {
         Card[] rowCards = new Card[CARD_AMT];
         for (int row = 0; row < matrix.getRowAmount(); row++) {
-            rowCards[row] = new Card(matrix.getRow(row));
+            rowCards[row] = Card.fromBitArray(matrix.getRow(row));
         }
         Card[] colCards = new Card[CARD_AMT];
         for (int col = 0; col < matrix.getRowAmount(); col++) {
-            colCards[col] = new Card(matrix.getColumn(col));
+            colCards[col] = Card.fromBitArray(matrix.getColumn(col));
         }
         boolean rowQuad = Quad.formsQuad(rowCards[0], rowCards[1], rowCards[2], rowCards[3], requiresUnique);
         boolean colQuad = Quad.formsQuad(colCards[0], colCards[1], colCards[2], colCards[3], requiresUnique);

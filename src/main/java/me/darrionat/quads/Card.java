@@ -3,88 +3,36 @@ package me.darrionat.quads;
 import me.darrionat.matrixlib.algebra.sets.Quantity;
 import me.darrionat.matrixlib.algebra.sets.Rational;
 
-import java.math.BigInteger;
 import java.util.Random;
 
 public class Card {
-    private final Rational[] bits;
-    private boolean zero = true;
-    private String asString;
+    public final int intValue;
+    private final boolean zero;
 
-    protected Card(int... bits) {
-        this(toRationals(bits));
-    }
-
-    /**
-     * Creates a card from the given rationals.
-     * <p>
-     * The given array of rationals will be taken mod 2 to form a bit string.
-     *
-     * @param bitString The bit string.
-     */
-    public Card(Rational[] bitString) {
-        bits = new Rational[bitString.length];
-        for (int i = 0; i < bitString.length; i++) {
-            Rational bit = bitString[i].mod(BigInteger.TWO);
-            this.bits[i] = bit;
-            if (!bit.zero())
-                zero = false;
-        }
-    }
-
-    public Card(Quantity[] bitString) {
-        bits = new Rational[bitString.length];
-        for (int i = 0; i < bitString.length; i++) {
-            int intBit = bitString[i].intValue() % 2;
-            Rational bit = new Rational(intBit);
-            this.bits[i] = bit;
-            if (!bit.zero())
-                zero = false;
-        }
-    }
-
-    private static Rational[] toRationals(int... bits) {
-        Rational[] toReturn = new Rational[bits.length];
-        for (int i = 0; i < bits.length; i++) {
-            toReturn[i] = new Rational(bits[i]);
-        }
-        return toReturn;
+    public Card(int value) {
+        this.intValue = value;
+        this.zero = value == 0;
     }
 
     public static Card getRandomCard(int dim) {
         Random r = new Random();
-        Rational[] bits = new Rational[dim];
-        for (int i = 0; i < dim; i++) {
-            // random value between 0 (inclusive) and 2 (exclusive) => value in {0,1}
-            bits[i] = r.nextInt(2) == 0 ? Rational.ZERO : Rational.ONE;
-        }
-        return new Card(bits);
+        return new Card(r.nextInt((int) Math.pow(2, dim)));
     }
 
-    public static Card parseCard(String cardString) {
-        // char[] bits = cardString.toCharArray();
-        int[] bits = new int[cardString.length()];
-        for (int i = 0; i < bits.length; i++) {
-            bits[i] = cardString.charAt(i);
-        }
-        return new Card(bits);
+    public static Card parseCard(String binaryString) {
+        return new Card(Integer.parseInt(binaryString, 2));
     }
 
-    public Rational[] getBits() {
-        return bits;
+    public static Card fromBitArray(Quantity[] bits) {
+        StringBuilder builder = new StringBuilder();
+        for (Quantity bit : bits) {
+            builder.append(bit.toString());
+        }
+        return new Card(Integer.parseInt(builder.toString(), 2));
     }
 
     public Card add(Card B) {
-        Rational[] C = new Rational[dimension()];
-        for (int i = 0; i < dimension(); i++) {
-            // We don't need to mod 2 here because the constructor does for us
-            C[i] = bits[i].addRational(B.bits[i]);
-        }
-        return new Card(C);
-    }
-
-    public int dimension() {
-        return bits.length;
+        return new Card(intValue ^ B.intValue);
     }
 
     /**
@@ -94,30 +42,21 @@ public class Card {
      * @return {@code true} if both cards have equal bits and dimension; {@code false} otherwise
      */
     public boolean equals(Object obj) {
-        if (!(obj instanceof Card))
+        if (!(obj instanceof Card B))
             return false;
-        Card B = (Card) obj;
-        if (dimension() != B.dimension())
-            return false;
-        for (int i = 0; i < dimension(); i++) {
-            if (!bits[i].equals(B.bits[i]))
-                return false;
-        }
-        return true;
+        return intValue == B.intValue;
     }
 
     public int hashCode() {
-        return Integer.parseInt(toString(), 2);
+        return intValue;
     }
 
     public String toString() {
-        if (asString != null)
-            return asString;
-        StringBuilder builder = new StringBuilder();
-        for (int i = 0; i < bits.length; i++) {
-            builder.append(bits[i]);
-        }
-        return asString = builder.toString();
+        return intValue + "";
+    }
+
+    public String toBinary() {
+        return Integer.toBinaryString(intValue);
     }
 
     /**
@@ -125,5 +64,18 @@ public class Card {
      */
     public boolean zero() {
         return zero;
+    }
+
+    public Quantity[] getBits(int dim) {
+        Quantity[] toReturn = new Quantity[dim];
+        StringBuilder builder = new StringBuilder(toBinary());
+        while (builder.length() != dim) {
+            builder.insert(0, "0");
+        }
+        String s = builder.toString();
+        for (int i = 0; i < s.length(); i++) {
+            toReturn[i] = Rational.parseNumber(s.charAt(i) + "");
+        }
+        return toReturn;
     }
 }

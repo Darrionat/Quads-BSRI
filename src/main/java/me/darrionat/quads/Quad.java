@@ -44,10 +44,11 @@ public class Quad implements QuadState {
     }
 
     public static boolean formsQuad(Card A, Card B, Card C, Card D, boolean requiresUnique) {
-        if (requiresUnique)
-            if (A.equals(B) || A.equals(C) || A.equals(D) || B.equals(C) || B.equals(D) || C.equals(D))
-                return false;
-        return A.add(B).add(C).add(D).zero();
+        if (!A.add(B).add(C).add(D).zero())
+            return false;
+        if (!requiresUnique)
+            return true;
+        return !(A.equals(B) || A.equals(C) || A.equals(D) || B.equals(C) || B.equals(D) || C.equals(D));
     }
 
     public static Quad parseQuad(String quadData) {
@@ -64,10 +65,9 @@ public class Quad implements QuadState {
     }
 
     public boolean equals(Object obj) {
-        if (!(obj instanceof Quad)) {
+        if (!(obj instanceof Quad ABCD)) {
             return false;
         }
-        Quad ABCD = (Quad) obj;
         HashSet<Card> set1 = new HashSet<>(Arrays.asList(cards));
         HashSet<Card> set2 = new HashSet<>(Arrays.asList(ABCD.cards));
         return set1.equals(set2);
